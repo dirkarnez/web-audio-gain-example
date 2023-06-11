@@ -29,7 +29,7 @@ sourceNode.connect(gainNode);
 // connect the gain node to the audio context destination (e.g. speakers)
 gainNode.connect(audioContext.destination);
 
-// play the audio
+// play the audio, this is optional (the audio has been amplified e.g. the audio controls play the amplified audio too)
 audio.play();
 </script>
 </body>
