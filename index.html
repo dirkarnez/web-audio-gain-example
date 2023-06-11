@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<script>
+// get the audio element
+const audio = document.querySelector('audio');
+
+// create an AudioContext
+const audioContext = new AudioContext();
+
+// create a MediaElementSource node to connect to the audio element
+const sourceNode = audioContext.createMediaElementSource(audio);
+
+// create a GainNode
+const gainNode = audioContext.createGain();
+// set the gain value (between 0 and 1) to 0.5
+gainNode.gain.value = 2;
+
+// connect the source node to the gain node
+sourceNode.connect(gainNode);
+
+// connect the gain node to the audio context destination (e.g. speakers)
+gainNode.connect(audioContext.destination);
+
+// play the audio
+audio.play();
+</script>
+</body>
+</html>
+
