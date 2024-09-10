@@ -14,5 +14,5 @@ web-audio-gain-example
   // if 5 is not enough, *append*
   gainNode.gain.value = 10;
   ```
-  - bookmark: `javascript:((gainValue) => { const video = document.querySelector('video'); if (!window.myGainNode) { const myAudioContext = new AudioContext(); const sourceNode = myAudioContext.createMediaElementSource(video); window.myGainNode = myAudioContext.createGain(); sourceNode.connect(window.myGainNode); window.myGainNode.connect(myAudioContext.destination); } window.myGainNode.gain.value = gainValue; })(prompt("Default is 1, enter the gain"))
-`
+- [hubs/src/utils/avatar-volume-utils.js at master · Hubs-Foundation/hubs](https://github.com/Hubs-Foundation/hubs/blob/master/src/utils/avatar-volume-utils.js)
+- [hubs/src/utils/audio-normalizer.js at master · Hubs-Foundation/hubs](https://github.com/Hubs-Foundation/hubs/blob/master/src/utils/audio-normalizer.js)
